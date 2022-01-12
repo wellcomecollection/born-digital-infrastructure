@@ -1,6 +1,8 @@
 data "aws_iam_policy_document" "allow_upload_to_s3" {
   statement {
     actions = [
+      "s3:GetObject*",
+      "s3:List*",
       "s3:PutObject*",
     ]
 
